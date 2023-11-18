@@ -1,0 +1,76 @@
+.landingPage{
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.container_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    position: relative;
+    top: -600px;
+    width: 80%;
+}
+
+.title{
+    font-family: 'Dog';
+    font-size: 15rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+    padding: 20px 40px;
+    border: 1px solid;
+    border-radius: 1000px;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+}
+
+.btn:active {
+    transform: translateY(-3px);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn:hover::after {
+    background-color: rgb(34, 53, 54);
+    transform: scaleX(1.4) scaleY(1.5);
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .container_text {
+        top: -500px;
+        width: 75%;
+    }
+
+    .title{
+        font-size: 8rem;
+    }
+}

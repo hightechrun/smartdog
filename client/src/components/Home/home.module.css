@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+.title {
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.title__text {
+  font-family: 'Dog';
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--title_page);
+  margin-bottom: 1rem;
+}
+
+.filter{
+  display: flex;
+  gap: 5rem;
+}
+
+.select {
+  width: 200px;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: var(--background_search);
+  box-shadow: var(--box_shadow_create);
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+
+
+
+.select:focus {
+  color: var(--select_focus);
+}
+
+.paginated {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.paginated li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 40px;
+  cursor: pointer;
+  box-shadow: var(--box_shadow_paginated);
+  border: var(--border_paginated);
+  background-color: var(--background_paginated);
+  color: var(--secondary-color);
+}
+
+.paginated .active {
+  box-shadow: var(--box_shadow_paginated_active);
+  border: var(--border_paginated);
+  background: var(--background_paginated_active);
+  color: rgb(0, 183, 255);
+}
+
+.paginated .activeMQ {
+  box-shadow: var(--box_shadow_paginated_active);
+  border: var(--border_paginated);
+  background: var(--background_paginated_active);
+  color: rgb(0, 183, 255);
+  display: none;
+}
+
+
+.paginated p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.paginated button{
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.noDogs{
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+
+@media (max-width: 768px){
+  .title {
+    margin-top: 4rem;
+  }
+
+  .title__text {
+    margin: 0;
+  }
+
+  .filter{
+    gap: 4rem;
+  }
+
+  .select{
+    width: 150px;
+  }
+
+  .paginated li {
+    display: none;
+  }
+  
+  .paginated .activeMQ {
+    display: flex;
+  }
+
+  .paginated button{
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading{
+    width: 200px;
+  }
+}

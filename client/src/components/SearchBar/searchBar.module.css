@@ -1,0 +1,36 @@
+.group{
+   display: flex;
+   line-height: 28px;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   max-width: 400px;
+}
+
+.input {
+   width: 400px;
+   height: 40px;
+   line-height: 28px;
+   padding: 0 3rem;
+   border: 2px solid transparent;
+   border-radius: 8px;
+   background-color: var(--background_search);
+   box-shadow: var(--box_shadow_search);
+   font-size: medium;
+   font-weight: bold;
+   color: var(--secondary-color);
+}
+   
+.input::placeholder {
+   color: #9e9ea7;
+}
+   
+.input:focus {
+   outline: none;
+}
+
+@media (max-width: 480px) {
+   .group{
+      max-width: 340px;
+   }
+}
